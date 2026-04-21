@@ -34,32 +34,37 @@ Server Side (server.py)
 import socket
 
 # Setup Server
+# AF_INET refers to the address family (IPv4)
+# SOCK_STREAM refers to the socket type (TCP)
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(('127.0.0.1', 65432))
 server_socket.listen(1)
 
-print("--- SERVER SQUARE GENERATOR SEDANG BERJALAN ---")
-print("Menunggu sambungan daripada client...")
+print("--- SERVER SQUARE GENERATOR IS RUNNING ---")
+print("Waiting for a connection from the client...")
 
 while True:
-    # Terima sambungan
+    # Accept connection
     conn, addr = server_socket.accept()
-    print(f"Client bersambung dari: {addr}")
+    print(f"Client connected from: {addr}")
     
-    # Terima nombor dari client
+    # Receive data from client
     data = conn.recv(1024).decode()
     
     if data:
         try:
+            # Convert received string to integer
             number = int(data)
             result = number * number
-            print(f"Menerima nombor: {number}. Menghantar hasil: {result}")
+            print(f"Received number: {number}. Sending result: {result}")
             
-            # Hantar jawapan balik
+            # Send the result back to the client
             conn.send(str(result).encode())
         except ValueError:
-            conn.send("Sila masukkan nombor sahaja!".encode())
+            # Error handling for non-integer inputs
+            conn.send("Error: Please enter numbers only!".encode())
             
+    # Close the specific connection
     conn.close()
 ~~~
 
@@ -71,16 +76,20 @@ import socket
 
 # Setup Client
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the server's IP address and port
 client_socket.connect(('127.0.0.1', 65432))
 
-# Input nombor
-number = input("Masukkan nombor yang ingin dikuasa duakan: ")
+# Input number
+# Prompt the user to enter a value to be squared
+number = input("Enter a number to be squared: ")
 client_socket.send(number.encode())
 
-# Terima hasil
-jawapan = client_socket.recv(1024).decode()
-print(f"Hasil dari Server: {jawapan}")
+# Receive result
+result = client_socket.recv(1024).decode()
+print(f"Result from Server: {result}")
 
+# Close the connection
 client_socket.close()
 ~~~
 
@@ -102,8 +111,7 @@ Execution Process
 server.py
 ~~~
 Output:
-<img width="1236" height="854" alt="image" src="https://github.com/user-attachments/assets/d4ecbcf8-c316-4982-a836-0397c6efdc5e" />
-
+<img width="1232" height="868" alt="image" src="https://github.com/user-attachments/assets/3423e54e-dcd5-41d8-961f-adbdcc9e15ec" />
 
 
 Execution Process
@@ -111,7 +119,8 @@ Execution Process
 client.py
 ~~~
 Output:
-<img width="1232" height="791" alt="image" src="https://github.com/user-attachments/assets/c8f2cf15-e9a2-4cc1-a5a7-db4c99bab26d" />
+<img width="1228" height="792" alt="image" src="https://github.com/user-attachments/assets/b0f27ef6-472b-41f1-b5ec-5cb7d922316e" />
+
 
 # Conclusion
 This task successfully demonstrates the practical implementation of network communication. By using TCP sockets, the application ensures data integrity. The project has strengthened the understanding of the Transport Layer within the OSI model.
