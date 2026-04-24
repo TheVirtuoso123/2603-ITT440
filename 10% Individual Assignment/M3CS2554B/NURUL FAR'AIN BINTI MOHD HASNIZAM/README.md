@@ -21,14 +21,26 @@ In large-scale data processing, the Sequential method is often time-consuming be
 - Generating data reports in .csv format and performance visualizations via bar charts.
 - Proving that parallel processing is the fastest approach for CPU-oriented tasks.
 
-# System Design
-The system follows a standard Client-Server architecture. We use TCP because it is connection-oriented, ensuring that the data is delivered reliably and in the correct order.
-- Data Volume Specification
-  To fulfil the requirement of processing a large volume of data, the system is designed to :
-  - input : A trigger command from the client.
-  - Process : The Server generates a list of 1,000,000 integers.
-  - Workload : Using multiprocessing. Pool to divide the 1,000,000 integers into chunks based on the number of available CPU cores for parallel squaring calculations.
+# System Requirements
+- Operating System : Window / Linux / macOS
+- Language : Python 3.13
+- Libraries : matplotlib (Visualitation), pandas, csv, time, threading, multiprocessing
+- Hardware : CPU with at least 4 logical processors / cores for optimal results
 
+  # Installation Guide
+  1. Install the required visualization library in the terminal:
+     ~~~
+     pip install matplotlib
+     ~~~
+     ~~~
+     pip install pandas
+     ~~~
+  2. Run the script:
+     ~~~
+     python server.py
+     ~~~
+  3. The results will be displayed.
+ 
 # Source Code Implementation
 ~~~
 import time
@@ -158,44 +170,21 @@ if __name__ == "__main__":
     plt.show()
 ~~~
 
-# How to run
-1. Run the server first :
-   ~~~
-   python server.py
-   ~~~
-   The server will enter a "Listening" state, waiting for client connections using Multi-threading.
-2. Open a second terminal and run the client :
-   ~~~
-   python client.py
-   ~~~
-   The client will establish a TCP connection to server at 127.0.0.1 65432.
-3. Execution and Results
-   - The client automatically sends the START_HEAVY_TASK command.
-   - The server performs Parallel Processing to calculate 1,000,000 square numbers.
-   - Once complete, the server sends a performance report (time and CPU usage) back to the client terminal.
-
-
 # Results and Discussion
 Execution Process
 ~~~
 server.py
 ~~~
 Output:
-<img width="1543" height="912" alt="image" src="https://github.com/user-attachments/assets/46b84cde-6397-44d3-b279-8ba3faf1c5d7" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c6b8d869-95d9-4c68-86b0-3db520f999b1" />
 
+<img width="1077" height="697" alt="image" src="https://github.com/user-attachments/assets/41fde872-8ac4-4d0d-8086-84b5b90df19b" />
 
-
-Execution Process
-~~~
-client.py
-~~~
-Output:
-<img width="1545" height="859" alt="image" src="https://github.com/user-attachments/assets/bab29f7c-62d2-44e3-84e9-dfebe5920088" />
-
-- The system succesfully processed a data set of 1,000,000 numbers.
-  - Total records : 1,000,000
-  - Execution Time (Parallel) : 0.9289 s
-  - CPU Cores Used : 4 Cores
+- The system succesfully processed a data set of 2,000,000 numbers.
+  - Parallel Time: 29.5765s
+  - Concurrent Time: 56.9571s
+  - Sequential Time: 66.4311s
+  - CPU Cores Used : 2 Cores
 
 # Conclusion
 In conclusion, for tasks involving heavy mathematical computations (CPU-bound tasks), utilizing Parallel Processing (Multiprocessing) is the optimal choice. While Concurrent (Threading) is effective for I/O-bound tasks, it is not comparable to the performance of Parallel processing in the context of large-scale data computation in Python.
