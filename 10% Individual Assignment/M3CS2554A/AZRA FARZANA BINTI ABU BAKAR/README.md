@@ -102,13 +102,13 @@ The system generates a bar chart to compare execution time between:
 
 ![Performance Graph](FIGURE1.jpg)
 
-## 🧠 Conclusion
+---
 
-This project shows that:
+## 🧾 Conclusion
 
-> Parallel and concurrent techniques are not always faster than sequential execution.
+This project shows that different programming techniques have different performance depending on the workload.
 
-For simple operations, sequential processing performs better, while parallel techniques are more useful for complex computations.
+For this dataset, Threading performed the best, proving that concurrent programming can significantly improve performance in certain scenarios.
 
 ---
 
