@@ -1,39 +1,59 @@
-**Name: Mastura Binti Rabaee**
+# 🚀 Adaptive Hybrid Parallel Web Health Monitoring System  
 
-**Student ID: 2024201716**
+**Name:** Mastura Binti Rabaee  
+**Student ID:** 2024201716  
+**Class:** M3CS2554A  
+**Course:** ITT440  
 
-**Class: M3CS2554A**
+---
 
-**Course: ITT440**
+## 📌 Introduction
+In today's digital environment, systems are required to handle large-scale data efficiently and reliably. Traditional sequential programming executes tasks one at a time, which can result in significant delays when processing thousands of web requests.
 
-# 🚀 Adaptive Hybrid Parallel Web Health Monitoring System
-# Introduction
-In modern computing, systems are required to process large volumes of data efficiently. Traditional sequential programming is often insufficient for handling high workloads due to its linear execution model. Parallel programming addresses this limitation by enabling multiple operations to be executed simultaneously.
-# 📌 Project Overview
-This project is developed as part of a Parallel Programming assignment using Python. The system monitors the status of a large number of URLs and demonstrates the performance differences between:
-- Sequential Programming
-- Concurrent Programming (Threading)
-- Parallel Programming (Multiprocessing)
-- The application is designed with dynamic resource scalling, response time measurement and result classification, making it more advanced and efficient than basic URL checkers.
-# 🎯 Objectives
-- To implement sequential, concurrent and parallel programming techniques
-- To process a large-scale dataset
-- To compare execution performance between different approaches
-- To demonstrate efficient workload distribution
-- To analyze response time and classify results
-# 🏗️ System Design
-The system consists of the following components:
-- URL Generator: Generates 5000 test URLs
-- URL Loader: Reads URLs from a file
-- URL Checker: Sends HTTP requests and records responses
+To overcome this limitation, concurrent and parallel programming techniques are used. These approaches allow multiple tasks to run simultaneously, improving performance, scalability, and overall system responsiveness. This project demonstrates how these techniques can be applied in a real-world web monitoring system.
+
+---
+
+## 📊 Project Overview
+This project focuses on developing a high-performance web health monitoring system capable of checking the status of **5000 URLs** efficiently.
+
+The system compares three execution approaches:
+- 🐢 Sequential Programming  
+- ⚡ Threading (Concurrent Programming)  
+- 🔥 Multiprocessing (Parallel Programming)  
+
+Additional features include:
+- Dynamic resource scaling  
+- Response time measurement  
+- Result classification (FAST, NORMAL, SLOW, FAILED)  
+
+---
+
+## 🎯 Objectives
+- To implement sequential, concurrent, and parallel programming techniques  
+- To efficiently process a large-scale dataset  
+- To compare execution performance  
+- To demonstrate workload distribution  
+- To analyze response time and classify results  
+
+---
+
+## 🏗️ System Design
+The system is designed using a modular approach.
+
+**Components:**
+- URL Generator → Generates 5000 URLs  
+- URL Loader → Loads URLs from file  
+- URL Checker → Sends HTTP requests  
 - Execution Modules:
-  - Sequential
-  - Threading
-  - Multiprocessing
-- Performance Analyzer
+  - Sequential  
+  - Threading  
+  - Multiprocessing  
+- Performance Analyzer  
+
+---
 # ▶️ How to Run
-Step 1: Generate URLs
-	**python generate_urls.py**
+**Step 1: Generate URLs python generate_urls.py**
 <details>
 <summary>Click to view generate_urls.py</summary>
 		
@@ -58,8 +78,7 @@ print("5000 URLs generated!")
 
 		
 
-Step 2: Run the Main Program
-# ▶️ Main Program
+**Step 2: Run the Main Program**
 		
 
 <details>
@@ -261,6 +280,7 @@ if __name__ == "__main__":
 ```
 </details> 
 		
+--- 
 
 # 🖥️ Program Menu
 ===== URL STATUS CHECKER ===== 
@@ -269,8 +289,14 @@ if __name__ == "__main__":
 3. Multiprocessing (Dynamic) 
 4. Run All (Compare)
 5. Exit
+
+---
+
 # 🧪 Sample Input
 The input file (urls.txt) contains 5000 URLs:
+
+---
+
 # 📊 Sample Output
 **Sequential Output**
 <img width="786" height="568" alt="Screenshot 2026-04-24 015214" src="https://github.com/user-attachments/assets/ef5e4583-ceb9-4011-9514-9318206017e1" />
@@ -289,44 +315,51 @@ The input file (urls.txt) contains 5000 URLs:
 **Final Output**
 <img width="532" height="109" alt="Screenshot 2026-04-24 015318" src="https://github.com/user-attachments/assets/ab3afd1c-030e-401c-944c-395c6b23ffad" />
 
+---
 
 # ⚡ Performance Analysis
-Method Time (seconds)
-		
+| Method           | Time (seconds) | Performance |
+|----------------|---------------|------------|
+| Sequential      | 1931.33       | Very Slow  |
+| Threading       | 18.86         | Fast       |
+| Multiprocessing | 236.86        | Moderate   |
 
-Sequential 1931.33
-		
-
-Threading 18.86
-		
-
-Multiprocessing 236.86
-		
+- Sequential execution is the slowest due to its linear processing approach
+- Threading achieves the best performance for I/O-bound tasks
+- Multiprocessing introduces overhead, making it less efficient for network-based operations
+--- 
 
 # Bar Chart
 
 <img width="640" height="480" alt="Figure_1" src="https://github.com/user-attachments/assets/97e58979-4de4-4d93-99b0-58a38ab72d78" />
 
-- Compares execution time of each method
-- Helps visualize which method is fastest
-Bar chart clearly show that:
-- Threading performs best for I/O-based tasks like URL checking.
-		
 
 **Observation:**
 		
 
-- Sequential is the slowest
-- Threading is the fastest for this project
-- Multiprocessing is slower due to overhead in network tasks
+The results clearly show that choosing the right programming model is crucial. Since this project involves network requests (I/O-bound tasks), threading performs significantly better by allowing multiple requests to be processed concurrently.
+
+Multiprocessing, although powerful for CPU-bound tasks, is less suitable here due to process creation overhead and communication costs.
+
+--- 
+
 # 🎥 Demonstration Video
+
+--- 
+
 # 🧩 Challenges Faced
 - Handling large datasets efficiently
 - Avoiding timeout errors
 - Optimizing thread and process usage
 - Ensuring fair performance comparison
+
+--- 
+
 # 💡 Conclusion
-This project successfully demonstrates how parallel and concurrent programming significantly improve performance compared to sequential execution.
-Dynamic scalling further enhances effieciency by adapting to workload size and system resources.
+In conclusion, this project successfully demonstrates how concurrent and parallel programming can significantly improve system performance.
+
+Threading is proven to be the most effective approach for I/O-bound applications such as web monitoring. Additionally, dynamic scaling enhances efficiency by adapting resource usage based on workload.
+
+Overall, this project highlights the importance of selecting the appropriate technique to achieve optimal performance in real-world systems.
 		
 
