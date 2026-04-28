@@ -93,13 +93,13 @@ Once the analysis is complete:
 ### 🖥️ Terminal Output
 The system displays the time taken for each mode:
 
-<img width="1456" height="766" alt="terminal" src="https://github.com/user-attachments/assets/6ace80db-8f0b-4e3c-949c-cb030e315d7f" />
+<img width="1452" height="762" alt="terminal" src="https://github.com/user-attachments/assets/a02a8b6e-e82a-4056-a3dc-ea9374e275aa" />
 <p align="center"><i>Figure 1.1 Terminal Output</i></p>
 
-- Sequential: ~136.4758s  
-- Concurrent: ~29.1252s  
-- Parallel: ~28.3052s
-- Speedup Ratio between Parallel and Sequential: ~4.82x Faster 
+- Sequential: ~75.7356s  
+- Concurrent: ~23.9716s  
+- Parallel: ~23.1516s
+- Speedup Ratio between Parallel and Sequential: ~3.27x Faster 
 
 ---
 
@@ -108,7 +108,7 @@ Contains 3,000,000 generated movie rating records including:
 - Movie title  
 - Rating  
 
-<img width="628" height="482" alt="input" src="https://github.com/user-attachments/assets/e861d44e-0587-42d1-a6af-420bcd490a49" />
+<img width="617" height="480" alt="input" src="https://github.com/user-attachments/assets/a7a8e040-3ac4-40f0-89fe-06e4db4b10aa" />
 <p align="center"><i>Figure 1.2 input.txt</i></p>
 
 ---
@@ -119,7 +119,7 @@ Contains:
 - Genre classification  
 - Average rating scores 
 
-<img width="620" height="481" alt="output" src="https://github.com/user-attachments/assets/476426a3-aa30-4fb7-b49f-e07eb4adc548" />
+<img width="618" height="481" alt="output" src="https://github.com/user-attachments/assets/3d9c64d3-026b-4b09-aae4-540b04060b07" />
 <p align="center"><i>Figure 1.3 output.txt</i></p>
 
  
@@ -132,7 +132,7 @@ A bar chart titled:
 
 Saved as `BenchmarkResults.png
 
-<img width="1000" height="600" alt="BenchmarkResults" src="https://github.com/user-attachments/assets/0065db90-7797-439d-a2c1-7745779bf525" />
+<img width="1000" height="600" alt="BenchmarkResults" src="https://github.com/user-attachments/assets/ecd2d081-80f3-468c-b842-f0a8c9df5113" />
 <p align="center"><i>Figure 1.4 Benchmark Results.txt</i></p>
 
 ## 💻 Source Code
@@ -146,7 +146,7 @@ The system is implemented in Python and includes:
 - Data aggregation and ranking  
 - Performance visualization using matplotlib  
 
-<img width="666" height="436" alt="sc1" src="https://github.com/user-attachments/assets/bc688b63-bd07-4e82-b9a1-ff1bd80768e9" />
+<img width="832" height="458" alt="sc1" src="https://github.com/user-attachments/assets/0a8b00b6-39af-4c70-85cf-11d4c755a38c" />
 <img width="830" height="418" alt="sc2" src="https://github.com/user-attachments/assets/ee775430-2a72-4264-8b4d-8ce60446cf23" />
 <img width="833" height="403" alt="sc3" src="https://github.com/user-attachments/assets/24f2e2d4-5f66-4a9b-8ffb-dc61db7aa7a0" />
 <img width="834" height="403" alt="sc4" src="https://github.com/user-attachments/assets/24d68a14-4b1c-4515-8fdb-cafd1a019832" />
