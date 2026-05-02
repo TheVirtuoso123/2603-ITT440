@@ -9,7 +9,7 @@
 ### Overview
 This project is a Solitaire Parallel Simulation System developed using Python to analyze and compare different execution methods in computing.
 
-It simulates multiple solitaire game types such as Klondike, Spider, Freecell, Pyramid, and Tripeaks with different probability settings and difficulty levels.
+It simulates multiple solitaire game types such as Klondike, Spider, Freecell, Pyramid and Tripeaks with different probability settings and difficulty levels.
 
 The system evaluates performance using three approaches:
 
@@ -17,11 +17,11 @@ The system evaluates performance using three approaches:
 - Threading
 - Multiprocessing
 
-A large number of simulations are executed to measure execution time, win rate, and overall efficiency. The results are visualized using graphs for better comparison.
+A large number of simulations are executed to measure execution time, win rate and overall efficiency. The results are visualized using graphs for better comparison.
 
 ### Problem Statement 
 
-Modern computing systems often struggle with performance when handling large-scale repetitive tasks. Sequential execution processes tasks one at a time, making it inefficient for heavy simulations.
+Modern computing systems often struggle with performance when handling large-scale repetitive tasks.
 
 In this project, running a large number of solitaire simulations sequentially becomes slow and time-consuming. This creates the need to explore parallel execution methods such as threading and multiprocessing. 
 
@@ -32,13 +32,13 @@ The key problems addressed in this project are:
 - ⚡ There is a need to compare real performance differences between threading and multiprocessing
 - 📊 Lack of visual comparison makes performance analysis difficult
 
-Therefore, this project aims to determine which execution method (sequential, threading, or multiprocessing) provides the best performance for large-scale game simulations.
+Therefore, this project aims to determine which execution method provides the best performance for large-scale game simulations.
 ## 🔍 Objectives
 
 - To develop a simulation-based application  
 	- Create a solitaire game simulator capable of running a large number of game iterations.
 - To implement different execution models  
-	- Apply sequential, threading (concurrent), and multiprocessing (parallel) techniques within the same system.
+	- Apply sequential, threading (concurrent) and multiprocessing (parallel) techniques within the same system.
 - To analyze performance differences  
 	- Measure and compare execution time for each method under different workloads.
 - To demonstrate efficiency of parallel programming  
@@ -379,6 +379,5 @@ https://youtu.be/_XEJKGvb3KY
 ## Conclusion
 This project successfully demonstrates the differences between sequential, concurrent and parallel programming.
 
-Multiprocessing is proven to be the most efficient approach for handling large-scale computational tasks, while threading is less effective due to inherent limitations in Python.
+Multiprocessing is proven to be the most efficient approach for handling large-scale computational tasks, while sequential is less effective.
 
-The program fulfills all assignment requirements by processing a large volume of data and clearly demonstrating performance differences between execution methods.
