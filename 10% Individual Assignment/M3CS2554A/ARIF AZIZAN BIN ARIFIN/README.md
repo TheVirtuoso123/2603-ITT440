@@ -1,8 +1,8 @@
 # Poker Game Simulator
 
-**Name:** ARIF AZIZAN BIN ARIFIN
-**Student ID:** 2024206174
-**Group :** M3CS2554A
+**Name:** ARIF AZIZAN BIN ARIFIN  
+**Student ID:** 2024206174  
+**Group :** M3CS2554A  
 **Course Code:** ITT440  
 **Lecturer:** Shahadan Bin Saad  
 **YouTube Demo:** [Watch on YouTube](*youtube URL*)
